@@ -17,6 +17,6 @@ def detail(request, id):
     post = get_object_or_404(Post, id=id, status=Post.ACTIVE)
 
     context = {
-        'podt': post,
+        'post': post,
     }
     return render(request, 'blog/detail.html', context)
