@@ -25,9 +25,12 @@ def detail(request, id):
             comment.post = post
             comment.save()
 
-            return redirect('post_detail')
+            return redirect('post_detail', id=id)
+        else:
+            form = CommentForm()
 
     context = {
         'post': post,
+        'form': form
     }
     return render(request, 'blog/detail.html', context)
