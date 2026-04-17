@@ -26,8 +26,8 @@ def detail(request, id):
             comment.save()
 
             return redirect('post_detail', id=id)
-        else:
-            form = CommentFrom()
+    else:
+        form = CommentFrom()
 
     context = {
         'post': post,
